@@ -19,12 +19,11 @@ void insertEnd(int value) {
         temp = temp->next;
     temp->next = newnode;
 }
-// Insert node in the middle
 void insertMiddle(int value) {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     newnode->data = value;
     newnode->next = NULL;
-    if (head == NULL) {          // empty list
+    if (head == NULL) {  // empty list
         head = newnode;
         return;
     }
@@ -39,7 +38,6 @@ void insertMiddle(int value) {
     newnode->next = slow->next;
     slow->next = newnode;
 }
-// Display list
 void display() {
     struct node *temp = head;
     printf("Linked List: ");

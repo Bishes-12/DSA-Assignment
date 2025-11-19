@@ -5,7 +5,6 @@ struct node {
     struct node *next;
 };
 struct node *head = NULL;
-// Insert at end (for building the list)
 void insertEnd(int value) {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     newnode->data = value;
@@ -19,7 +18,6 @@ void insertEnd(int value) {
         temp = temp->next;
     temp->next = newnode;
 }
-// Delete node at specified position
 void deleteAtPosition(int pos) {
     if (head == NULL) {
         printf("List is empty.\n");

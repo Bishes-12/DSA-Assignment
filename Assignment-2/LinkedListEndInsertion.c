@@ -5,7 +5,6 @@ struct node {
     struct node *next;
 };
 struct node *head = NULL;
-// Function to insert at the end
 void insertEnd(int value) {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     newnode->data = value;
@@ -20,7 +19,6 @@ void insertEnd(int value) {
     }
     temp->next = newnode;
 }
-// Function to display the list
 void display() {
     struct node *temp = head;
     printf("Linked List: ");

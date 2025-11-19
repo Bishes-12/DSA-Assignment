@@ -5,7 +5,6 @@ struct node {
     struct node *next;
 };
 struct node *head = NULL;
-// Function to insert nodes at end (for testing)
 void insertEnd(int value) {
     struct node *newnode = (struct node*)malloc(sizeof(struct node));
     newnode->data = value;
@@ -19,7 +18,6 @@ void insertEnd(int value) {
         temp = temp->next;
     temp->next = newnode;
 }
-// Function to delete from beginning
 void deleteBeginning() {
     if (head == NULL) {
         printf("List is empty. Nothing to delete.\n");
@@ -30,7 +28,6 @@ void deleteBeginning() {
     printf("Deleted node with value: %d\n", temp->data);
     free(temp);
 }
-// Function to display linked list
 void display() {
     struct node *temp = head;
     printf("Linked List: ");
